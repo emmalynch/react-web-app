@@ -169,7 +169,7 @@ By default, posts are presented in collapsed panels, grouped by week number.
 ![Default grouping](./resources/default_view.png)
 
 Posts can be re-grouped by selecting an option from the drop-down menu.
-![drop down](./resources/dropdown.png | width=100)
+![drop down](./resources/dropdown.png)
 
 ![grouping](./resources/grouping.png)
 
