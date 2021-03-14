@@ -58,7 +58,7 @@ Unit tests are written in typescript and executed with `Jest`.
 
 To run unit tests for the backend, from the root directory, run:
 
-`cd client && yarn jest`
+`cd client && yarn test`
 
 This will start tests in watch mode.
 

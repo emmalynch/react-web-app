@@ -54,12 +54,12 @@ class PostDetail extends React.Component<PostDetailProps, IPost> {
         const textAreaStyle = { width: '90%'}
        
         return (
-            <Grid direction="column" container spacing={3} key={this.props.post.id} >
-            <Grid item><label>{ID_LABEL}{this.state.id}</label></Grid>
-            <Grid item><label>{DATE_LABEL}{this.state.date.toString()}</label></Grid>
-            <Grid item><label>{LOCATION_LABEL}{this.state.location}</label></Grid>
-            <Grid item><label>{AUTHOR_LABEL}<input type="text" id={id} value={this.state.author} onChange={(ev) => this.handleAuthorChanges(ev)}></input></label></Grid>
-            <Grid item xs={7}>
+            <Grid direction="column" container spacing={3} key={this.props.post.id} data-testid="PostDetailGrid">
+            <Grid item data-testid="grid-id"><label>{ID_LABEL}{this.state.id}</label></Grid>
+            <Grid item data-testid="grid-date"><label>{DATE_LABEL}{this.state.date.toString()}</label></Grid>
+            <Grid item data-testid="grid-loc"><label>{LOCATION_LABEL}{this.state.location}</label></Grid>
+            <Grid item  data-testid="grid-author"><label>{AUTHOR_LABEL}<input type="text" id={id} value={this.state.author} onChange={(ev) => this.handleAuthorChanges(ev)}></input></label></Grid>
+            <Grid item xs={7}  data-testid="grid-text">
                 <label>{TEXT_LABEL}<TextareaAutosize style={textAreaStyle} id={id} value={this.state.text} rowsMin={3} onChange={(ev) => this.handleTextChanges(ev)}></TextareaAutosize></label>
             </Grid>
             <Grid  item xs={1}><input type="submit" id={id} value="Save" onClick={(ev) => this.handleSubmit(ev)}></input></Grid>
